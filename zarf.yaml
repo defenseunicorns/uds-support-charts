@@ -28,7 +28,7 @@ constants:
     value: "###ZARF_PKG_TMPL_NAMESPACE###"
 
 components:
-  - name: "###ZARF_PKG_TMPL_NAME###"
+  - name: flux-app
     required: true
     actions:
       onDeploy:
