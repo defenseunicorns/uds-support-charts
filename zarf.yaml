@@ -33,7 +33,7 @@ components:
     actions:
       onDeploy:
         before:
-          - cmd: awk '{printf "%s\\n", $0}' values.yaml | sed "s/\"/\\\\\"/g"
+          - cmd: awk '{printf "%s\\n", $0}' values-###ZARF_PKG_TMPL_NAME###.yaml | sed "s/\"/\\\\\"/g"
             description: Read file contents.  Need to escape all new lines and quotes so that it injects into the Kubernetes Secret correctly
             setVariables:
             - name: CONTENTS
