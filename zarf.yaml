@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/defenseunicorns/zarf/main/zarf.schema.json
+kind: ZarfPackageConfig
+metadata:
+  name: flux-app
+  description: "skeleton package to import and build off of for deploying an app with flux"
+  version: "0.0.1"
+  architecture: amd64
+
+
+variables:
+  - name: ISTIO_ENABLED
+    default: "false"
+    description: "Toggles whether istio is enabled. Sent to each chart and matches the default .istio.enabled used in Big Bang"
+  - name: MONITORING_ENABLED
+    default: "false"
+    description: "Toggles whether monitoring is enabled. Sent to each chart and matches the default .istio.enabled used in Big Bang"
+
+constants:
+  - name: REPO
+    value: "###ZARF_PKG_TMPL_REPO###"
+  - name: TAG
+    value: "###ZARF_PKG_TMPL_TAG###"
+  - name: NAME
+    value: "###ZARF_PKG_TMPL_NAME###"
+  - name: PATH
+    value: "###ZARF_PKG_TMPL_PATH###"
+  - name: NAMESPACE
+    value: "###ZARF_PKG_TMPL_NAMESPACE###"
+
+components:
+  - name: app
+    required: true
+    actions:
+      onDeploy:
+        before:
+          - cmd: awk '{printf "%s\\n", $0}' values.yaml | sed "s/\"/\\\\\"/g"
+            description: Read file contents.  Need to escape all new lines and quotes so that it injects into the Kubernetes Secret correctly
+            setVariables:
+            - name: CONTENTS
+    description: "Deploy Flux wrapped Application"
+    manifests:
+    - name: app-manifests
+      files:
+      - manifests/secret.yaml
+      - manifests/gitrepository.yaml
+      - manifests/helmrelease.yaml
+      - manifests/namespace.yaml
