@@ -28,7 +28,7 @@ constants:
     value: "###ZARF_PKG_TMPL_NAMESPACE###"
 
 components:
-  - name: app
+  - name: "###ZARF_PKG_TMPL_NAME###"
     required: true
     actions:
       onDeploy:
@@ -45,3 +45,5 @@ components:
       - manifests/gitrepository.yaml
       - manifests/helmrelease.yaml
       - manifests/namespace.yaml
+    repos:
+    - "###ZARF_PKG_TMPL_REPO###"
