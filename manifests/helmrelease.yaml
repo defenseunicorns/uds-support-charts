@@ -15,15 +15,17 @@ spec:
   test:
     enable: false
   install:
+    timeout: 20m
     remediation:
       retries: -1
   upgrade:
+    timeout: 20m
     remediation:
       retries: 5
       remediateLastFailure: true
     cleanupOnFail: true
   rollback:
-    timeout: 10m
+    timeout: 20m
     cleanupOnFail: false
   values:
     istio:
