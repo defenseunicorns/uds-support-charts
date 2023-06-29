@@ -1,0 +1,8 @@
+application:
+  name: placeholder-name
+  namespace: placeholder-namespace
+  path: /place/holder
+  repository: http://place.holder/repo.git
+  tag: 0.1
+  values: |
+    placeholder-key: placeholder-value
