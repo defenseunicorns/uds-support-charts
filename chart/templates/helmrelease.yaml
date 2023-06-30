@@ -1,17 +1,17 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: "###ZARF_CONST_NAME###"
+  name: {{ .Values.application.name }}
   namespace: bigbang
 spec:
-  targetNamespace: "###ZARF_CONST_NAMESPACE###"
+  targetNamespace: {{ .Values.application.namespace }}
   interval: 10m
   chart:
     spec:
-      chart: "###ZARF_CONST_PATH###"
+      chart: {{ .Values.application.path }}
       sourceRef:
         kind: GitRepository
-        name: "###ZARF_CONST_NAME###"
+        name: {{ .Values.application.name }}
   test:
     enable: false
   install:
@@ -27,11 +27,6 @@ spec:
   rollback:
     timeout: 20m
     cleanupOnFail: false
-  values:
-    istio:
-      enabled: "###ZARF_VAR_ISTIO_ENABLED###"
-    monitoring:
-      enabled: "###ZARF_VAR_MONITORING_ENABLED###"
   valuesFrom:
     - kind: Secret
-      name: "bigbang-###ZARF_CONST_NAME###-values"
+      name: "bigbang-{{- .Values.application.name -}}-values"

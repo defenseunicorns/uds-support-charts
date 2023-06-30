@@ -1,2 +1,2 @@
-# zarf-skeleton-flux-app
-A Zarf skeleton package for deploying applications using flux
+# flux-app-helm-chart
+A helm chart for deploying applications using flux
