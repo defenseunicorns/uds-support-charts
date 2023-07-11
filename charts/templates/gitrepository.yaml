@@ -7,4 +7,5 @@ spec:
   interval: 10m
   url: {{ .Values.application.repository }}
   ref:
-    tag: "{{ .Values.application.tag }}"
+    tag: "{{ .Values.application.ref.tag }}"
+    commit: "{{ .Values.application.ref.commit }}"
