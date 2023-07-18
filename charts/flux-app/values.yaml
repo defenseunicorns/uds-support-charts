@@ -8,3 +8,9 @@ application:
     commit: ""
   values: |
     placeholder-key: placeholder-value
+  # Follows https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta?utm_source=godoc#NamespacedObjectReference syntax, example commented
+  dependsOn: []
+    # - name: backend
+    #   namespace: ns1
+    # - name: svc
+    #   namespace: ns2
