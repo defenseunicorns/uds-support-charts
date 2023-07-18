@@ -1,0 +1,7 @@
+namespaces:
+  - name: test1
+    labels:
+  - name: test2
+    labels:
+      key: value
+      key2: value2

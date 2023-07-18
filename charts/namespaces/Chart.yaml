@@ -1,0 +1,5 @@
+apiVersion: v2
+name: namespaces
+description: A chart to deploy a list of namespaces with labels
+type: application
+version: 1.0.0
