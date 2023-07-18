@@ -1,5 +1,6 @@
 application:
   name: placeholder-name
+  createNamespace: true
   namespace: placeholder-namespace
   path: /place/holder
   repository: http://place.holder/repo.git

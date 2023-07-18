@@ -1,6 +1,8 @@
+{{- if .Values.application.createNamespace }}
 apiVersion: v1
 kind: Namespace
 metadata:
   name: {{ .Values.application.namespace }}
   labels:
     istio-injection: enabled
+{{- end -}}
