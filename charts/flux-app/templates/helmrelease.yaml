@@ -30,3 +30,7 @@ spec:
   valuesFrom:
     - kind: Secret
       name: "bigbang-{{- .Values.application.name -}}-values"
+{{- if .Values.application.dependsOn }}
+  dependsOn:
+{{ .Values.application.dependsOn | toYaml | indent 4}}
+{{- end -}}
