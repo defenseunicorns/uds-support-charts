@@ -28,4 +28,14 @@ entries:
     urls:
     - https://github.com/defenseunicorns/flux-app-helm-chart/releases/download/flux-app-1.0.2/flux-app-1.0.2.tgz
     version: 1.0.2
-generated: "2023-07-18T18:04:27.096345462Z"
+  namespaces:
+  - apiVersion: v2
+    created: "2023-07-18T18:31:51.063663927Z"
+    description: A chart to deploy a list of namespaces with labels
+    digest: 9e0b2b6d4af291539364a355ed7cf625d1f79d25ecd79e5907abf5ae30996ab1
+    name: namespaces
+    type: application
+    urls:
+    - https://github.com/defenseunicorns/uds-support-charts/releases/download/namespaces-1.0.0/namespaces-1.0.0.tgz
+    version: 1.0.0
+generated: "2023-07-18T18:31:51.063674227Z"
