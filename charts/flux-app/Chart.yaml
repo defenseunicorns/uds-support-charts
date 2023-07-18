@@ -2,4 +2,4 @@ apiVersion: v2
 name: flux-app
 description: A chart to deploy an application via flux
 type: application
-version: 1.0.3
+version: 1.0.4
