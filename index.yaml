@@ -2,6 +2,15 @@ apiVersion: v1
 entries:
   flux-app:
   - apiVersion: v2
+    created: "2023-07-18T00:10:35.987526555Z"
+    description: A chart to deploy an application via flux
+    digest: 986ec8994c60a0ba2a47df6b0913bf03a23ea2f6de07e0d3d45ec3e0c751dcde
+    name: flux-app
+    type: application
+    urls:
+    - https://github.com/defenseunicorns/flux-app-helm-chart/releases/download/flux-app-1.0.3/flux-app-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v2
     created: "2023-07-18T00:00:34.739799693Z"
     description: A chart to deploy an application via flux
     digest: f45afa7c2ae26a2c9af675d8f93066021e7736a4470106cb81d366e9391d2e3d
@@ -10,4 +19,4 @@ entries:
     urls:
     - https://github.com/defenseunicorns/flux-app-helm-chart/releases/download/flux-app-1.0.2/flux-app-1.0.2.tgz
     version: 1.0.2
-generated: "2023-07-18T00:00:34.739814693Z"
+generated: "2023-07-18T00:10:35.987533455Z"
