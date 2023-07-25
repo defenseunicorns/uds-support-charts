@@ -4,6 +4,7 @@ metadata:
   name: {{ .Values.application.name }}
   namespace: bigbang
 spec:
+  releaseName: {{ .Values.application.name }}
   targetNamespace: {{ .Values.application.namespace }}
   interval: 10m
   chart:
