@@ -31,6 +31,10 @@ spec:
   valuesFrom:
     - kind: Secret
       name: "bigbang-{{- .Values.application.name -}}-values"
+      valuesKey: "values.yaml"
+    - kind: Secret
+      name: "bigbang-{{- .Values.application.name -}}-values"
+      valuesKey: "overlay.yaml"
 {{- if .Values.application.dependsOn }}
   dependsOn:
 {{ .Values.application.dependsOn | toYaml | indent 4}}
