@@ -2,6 +2,15 @@ apiVersion: v1
 entries:
   flux-app:
   - apiVersion: v2
+    created: "2023-08-18T21:26:33.74638778Z"
+    description: A chart to deploy an application via flux
+    digest: 2dea3772979abe68da7e1b5442ebbc67ebb88c52c9bdd5e22b88e83e2a2ada6e
+    name: flux-app
+    type: application
+    urls:
+    - https://github.com/defenseunicorns/uds-support-charts/releases/download/flux-app-1.0.7/flux-app-1.0.7.tgz
+    version: 1.0.7
+  - apiVersion: v2
     created: "2023-08-17T19:09:34.058645738Z"
     description: A chart to deploy an application via flux
     digest: cda26b591b312fc255a18441b85db6e06bbc3d702172bbcec62b30bbec0a6e3b
@@ -56,4 +65,4 @@ entries:
     urls:
     - https://github.com/defenseunicorns/uds-support-charts/releases/download/namespaces-1.0.0/namespaces-1.0.0.tgz
     version: 1.0.0
-generated: "2023-08-17T19:09:34.058669439Z"
+generated: "2023-08-18T21:26:33.746613083Z"
